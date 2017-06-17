@@ -24,49 +24,219 @@
 </head>
 
 <body>
-    <!-- Modal -->
-<div id="loginsignup" class="modal fade" role="dialog">
-  <div class="modal-dialog animated flipInY">
+    <!-- Login Signup Modal Start -->
+    <div id="loginsignup" class="modal fade login-sigup-modal" role="dialog">
+        <div class="modal-dialog animated flipInY">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <ul class="nav nav-pills">
+                        <li class="active"><a data-toggle="pill" href="#signup">Sign Up</a></li>
+                        <li><a data-toggle="pill" href="#signin">Sign In</a></li>
+
+                    </ul>
+                </div>
+                <div class="">
+
+
+                    <div class="tab-content">
+                        <div id="signup" class="tab-pane fade in active">
+                            <form>
+                                <div class="form-group input-icon">
+                                    <label>Name:</label>
+                                    <i class="material-icons">person</i>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="form-group input-icon">
+                                    <label>Username:</label>
+                                    <i class="material-icons">account_box</i>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="form-group input-icon">
+                                    <label for="email">Email address:</label>
+                                    <i class="material-icons">email</i>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group input-icon">
+                                    <label for="">Phone Number:</label>
+                                    <i class="material-icons">phone</i>
+                                    <input type="tel" class="form-control" id="">
+                                </div>
+                                <div class="form-group input-icon">
+                                    <label for="pwd">Password:</label>
+                                    <i class="material-icons">lock</i>
+                                    <input type="password" class="form-control" id="pwd">
+                                </div>
+                                <div class="form-group input-icon">
+                                    <label for="pwd">Confirm Password:</label>
+                                    <i class="material-icons">lock</i>
+                                    <input type="password" class="form-control" id="pwd">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block btn-lg  fourrem-margin-top">Submit</button>
+
+
+                            </form>
+
+                        </div>
+                        <div id="signin" class="tab-pane fade">
+                            <form>
+                                <div class="form-group input-icon">
+                                    <label>Username:</label>
+                                    <i class="material-icons">account_box</i>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                <div class="form-group input-icon">
+                                    <label for="pwd">Password:</label>
+                                    <i class="material-icons">lock</i>
+                                    <input type="password" class="form-control" id="pwd">
+                                </div>
+                                <div class="clearfix">
+                                    <span class="checkbox pull-left">
+                                        <label><input type="checkbox"> Remember me</label>
+                                    </span>
+                                    <span class="pull-right forgot-password-link"> <a href="#" data-toggle="modal" data-target="#forgotpassword">Forgot Password</a> </span>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-primary btn-block btn-lg fourrem-margin-top ">Submit</button>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Login Signup Modal End -->
+
+    <!-- forgot password Modal Start -->
+    <div id="forgotpassword" class="modal fade forgot-password" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Forgot Password</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Enter the registered phone number</p>
+                    <div class="form-group input-icon">
+                        <label for="">Phone Number:</label>
+                        <i class="material-icons">phone</i>
+                        <input type="tel" class="form-control" id="">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg tworem-margin-top ">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- forgot password Modal End -->
+    <!-- select location Modal Start -->
+    <div id="selectlocation" class="modal fade select-location" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Select Location</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="sel1">Select any one:</label>
+                        <select class="form-control" id="sel1">
+                            <option>By Pincode</option>
+                            <option>By City name</option>
+    
+                        </select>
+                    </div>
+                    <div class="form-group ">
+
+                        <input type="text" class="form-control" placeholder="Enter City name or Pincode" id="">
+                    </div>
+                    <h3 class="line-behind-text fourrem-margin-top"><span class="text-muted">Or</span></h3>
+
+                    <div class="location-section">
+                        <button class="btn-block btn btn-default">Get My Location</button>
+                        <h4 class="text-center tworem-margin-top text-uppercase text-success">No Location Found</h4>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg  ">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- select location Modal End -->
+    <div class="fixed-button-container">
+        <button class="btn btn-primary btn-lg ">
+    Free Listing
+</button>
     </div>
 
-  </div>
-</div>
 
-
-<nav class="navbar homepage navbar-default">
+    <nav class="navbar homepage navbar-default">
         <div class="container">
-
-            <a class="navbar-brand pull-left" href="#">LOGO</a>
-
-            <ul class="nav navbar-nav navbar-right navbar-btns">
-                <li><button type="button" href="#" class="btn rounded-btn wire-btn">Free Listing</button></li>
-                <li><button href="#" class="btn btn-primary rounded-btn" data-toggle="modal" data-target="#loginsignup">Login/Sign Up</button></li>
-                <li class="dropdown profile-dropdown">
-                    <a href="#" class="dropdown-toggle inline-block padding-zero" data-toggle="dropdown" role="button">
+            <div class="navbar-header pull-left">
+               
+                <a class="navbar-brand" href="#">WebSiteName</a>
+                
+            </div>
+             <div class="navbar-header pull-right">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                 <!--<ul class="nav navbar-nav navbar-right navbar-btns pull-left special-nav">
+                       <li><button href="#" class="btn btn-primary rounded-btn" data-toggle="modal" data-target="#loginsignup">Login/Sign Up</button></li>
+                    <li class="dropdown profile-dropdown">
+                        <a href="#" class="dropdown-toggle inline-block padding-zero" data-toggle="dropdown" role="button">
                         <img class="profile-image" src="./img/profile.jpg" alt="">
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">My Listing</a></li>
+                            <li><a href="#">My Free Listing</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>-->
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right navbar-btns">
+                    <li><a href="#">Advertise </a></li>
+
+                    <li><button href="#" class="btn btn-primary rounded-btn wire-btn">Free Listing</button></li>
+                    <li><button href="#" class="btn btn-primary rounded-btn" data-toggle="modal" data-target="#loginsignup">Login/Sign Up</button></li>
+                    <li class="dropdown profile-dropdown">
+                        <a href="#" class="dropdown-toggle inline-block padding-zero" data-toggle="dropdown" role="button">
+                        <img class="profile-image" src="./img/profile.jpg" alt="">
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">My Listing</a></li>
+                            <li><a href="#">My Free Listing</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            
+
         </div>
     </nav>
 
@@ -88,20 +258,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-2 col-md-5 col-xs-12 left-sec">
-                    <button class="btn btn-default home-btn pull-left"><i class="material-icons">home</i> </button>
-                    <input type="text" class="form-control search-box pull-left">
+                    <button class="btn btn-default home-btn pull-left" data-toggle="tooltip" title="Home"><i class="material-icons">home</i> </button>
+                    <input type="text" class="form-control search-box pull-left" placeholder="Enter Search Text Here">
                     <button class="btn btn-primary search-btn pull-left">Search</button>
 
                 </div>
                 <div class=" col-md-3 col-xs-12 right-sec">
-                    <label class="filter-label pull-left"> Filter By:</label>
-                    <select class="form-control filter-select pull-left">
-                <option>Margoa</option>
-                <option>Panjim</option>
-                <option>Vasco</option>
-                <option>Mapusa</option>
-                <option>Ponda</option>
-                </select>
+                    <span class=" pull-left" data-toggle="tooltip" title="Set Location">
+                        <button class="btn btn-default location-button"  data-toggle="modal" data-target="#selectlocation"><i class="material-icons">location_on</i></button>
+                   
+                    </span>
+                    <div class="location-name pull-left text-center ellipsis">
+                        panjim
+                    </div>
+
                 </div>
             </div>
         </div>

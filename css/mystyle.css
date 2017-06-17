@@ -5,8 +5,14 @@
 .padding-zero {
   padding: 0 !important; }
 
+.relative {
+  position: relative; }
+
 .tworem-margin-top {
   margin-top: 2rem; }
+
+.fourrem-margin-top {
+  margin-top: 4rem; }
 
 .ellipsis {
   white-space: nowrap;
@@ -20,12 +26,53 @@
     margin-right: 5px;
     vertical-align: bottom; }
 
+.input-icon {
+  position: relative; }
+  .input-icon i {
+    position: absolute;
+    color: #797979; }
+  .input-icon i {
+    top: 20%;
+    left: 10px; }
+  .input-icon label + i {
+    top: 50%;
+    left: 10px; }
+  .input-icon input {
+    padding-left: 40px; }
+
+.fixed-button-container {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  width: 114px;
+  height: 0px;
+  z-index: 999; }
+  .fixed-button-container button {
+    text-align: center;
+    height: 50px;
+    width: 180px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
 .homepage.navbar {
   margin-bottom: 0; }
 
-.navbar-btns li {
+.special-nav {
+  margin: 0px 15px; }
+
+.navbar-btns > li {
   line-height: 80px;
   margin-left: 10px; }
+
+@media (max-width: 767px) {
+  .navbar-btns > li {
+    line-height: 50px; } }
+
+.navbar-collapse {
+  width: 100%;
+  margin: 0; }
 
 .wire-btn {
   background: transparent;
@@ -59,7 +106,12 @@
   .search-container .home-btn {
     width: 50px;
     height: 50px;
-    border-radius: 3px 0 0 3px; }
+    border-radius: 3px 0 0 3px;
+    padding: 0; }
+    .search-container .home-btn i {
+      vertical-align: bottom;
+      line-height: 50px;
+      color: #ff8100; }
   .search-container .search-box {
     height: 50px;
     width: calc(100% - 125px);
@@ -80,6 +132,28 @@
   .search-container .left-sec,
   .search-container .right-sec {
     padding: 4px 15px; }
+  .search-container .location-button {
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    border-radius: 3px 0 0 3px;
+    width: 50px; }
+    .search-container .location-button i {
+      vertical-align: bottom;
+      line-height: 50px;
+      color: #717171; }
+  .search-container .location-name {
+    width: calc(100% - 50px);
+    line-height: 50px;
+    padding: 0 4px;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    height: 50px;
+    font-weight: 700;
+    color: #4CAF50;
+    background-color: white;
+    border-left: 0;
+    border-radius: 0 3px 3px 0; }
 
 .category-section {
   padding: 15px;
@@ -117,3 +191,62 @@
 
 .side-add .flexslider .slides img {
   height: 555px; }
+
+.login-sigup-modal .nav-pills > li > a {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #afafaf;
+  border-radius: 0;
+  border-bottom: 3px solid transparent; }
+
+.login-sigup-modal .nav-pills > li.active > a {
+  color: #ff8100;
+  background: transparent;
+  border-bottom: 3px solid #ff8100; }
+
+.login-sigup-modal .tab-content {
+  padding: 15px 25px 25px 25px; }
+
+.login-sigup-modal .modal-header {
+  border: 0; }
+
+.login-sigup-modal .forgot-password-link {
+  line-height: 40px; }
+
+.login-sigup-modal .form-control {
+  height: 40px; }
+
+@media (min-width: 768px) {
+  .login-sigup-modal .modal-dialog,
+  .forgot-password .modal-dialog,
+  .select-location .modal-dialog {
+    width: 450px; } }
+
+.forgot-password .form-control, .select-location .form-control {
+  height: 40px; }
+
+.select-location .location-section {
+  padding: 25px; }
+
+.line-behind-text {
+  position: relative;
+  z-index: 1;
+  text-align: center; }
+  .line-behind-text:before {
+    border-top: 1px solid #dfdfdf;
+    content: "";
+    margin: 0 auto;
+    /* this centers the line to the full width specified */
+    position: absolute;
+    /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1; }
+  .line-behind-text span {
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */
+    background: #fff;
+    padding: 0 15px; }

@@ -4,3 +4,6 @@ $(window).load(function () {
     controlNav: false
   });
 });
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
