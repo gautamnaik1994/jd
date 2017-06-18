@@ -190,10 +190,10 @@ $searchcomponentheight:50px;
     border-radius: 0 3px 3px 0;
     }
 }
-
+$categorycontainerheight:700px;
 .category-section {
     padding: 15px;
-    height: 500px;
+    height: $categorycontainerheight;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -232,7 +232,7 @@ $searchcomponentheight:50px;
     .flexslider {
         .slides {
             img {
-                height: 555px;
+                height: $categorycontainerheight + 55px;
             }
         }
     }
@@ -311,4 +311,9 @@ $searchcomponentheight:50px;
         background: #fff; 
         padding: 0 15px; 
     }
+}
+footer{
+    height: 100px;
+    margin-top: 4rem;
+    background-color: #1f1f1f;
 }

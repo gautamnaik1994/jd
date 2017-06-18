@@ -157,7 +157,7 @@
 
 .category-section {
   padding: 15px;
-  height: 500px;
+  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -190,7 +190,7 @@
     transform: scale(1.05); }
 
 .side-add .flexslider .slides img {
-  height: 555px; }
+  height: 755px; }
 
 .login-sigup-modal .nav-pills > li > a {
   font-size: 18px;
@@ -250,3 +250,8 @@
     /* to hide the lines from behind the text, you have to set the background color the same as the container */
     background: #fff;
     padding: 0 15px; }
+
+footer {
+  height: 100px;
+  margin-top: 4rem;
+  background-color: #1f1f1f; }
