@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 $primary-color:#ff8100;
+$fitygrey:#8c8c8c;
 .inline-block {
     display: inline-block!important;
 }
@@ -7,9 +8,12 @@ $primary-color:#ff8100;
 .padding-zero {
     padding: 0!important;
 }
-.relative{
+
+.relative {
     position: relative;
 }
+
+
 .tworem-margin-top {
     margin-top: 2rem;
 }
@@ -51,45 +55,47 @@ $primary-color:#ff8100;
         padding-left: 40px;
     }
 }
-.fixed-button-container{
+
+.fixed-button-container {
     position: fixed;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     right: 0;
     width: 114px;
     height: 0px;
-        z-index: 999;
-    button{
+    z-index: 999;
+    button {
         text-align: center;
-       height: 50px;
-    width: 180px;
-    transform: rotate(-90deg);
+        height: 50px;
+        width: 180px;
+        transform: rotate(-90deg);
     }
 }
 
 .homepage.navbar {
     margin-bottom: 0;
 }
-.special-nav{
+
+.special-nav {
     margin: 0px 15px;
 }
+
 .navbar-btns {
-   &>li {
+    &>li {
         line-height: 80px;
         margin-left: 10px;
     }
 }
 
-@media (max-width:767px){
-   .navbar-btns {
-   &>li {
-        line-height: 50px;
-       
+@media (max-width:767px) {
+    .navbar-btns {
+        &>li {
+            line-height: 50px;
+        }
     }
-} 
 }
 
-.navbar-collapse{
+.navbar-collapse {
     width: 100%;
     margin: 0;
 }
@@ -132,7 +138,7 @@ $searchcomponentheight:50px;
         width: $searchcomponentheight;
         height: $searchcomponentheight;
         border-radius: 3px 0 0 3px;
-            padding: 0;
+        padding: 0;
         i {
             vertical-align: bottom;
             line-height: 50px;
@@ -168,28 +174,29 @@ $searchcomponentheight:50px;
         height: $searchcomponentheight;
         padding: 0;
         line-height: 50px;
-          border-radius: 3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
         width: 50px;
         i {
             vertical-align: bottom;
             line-height: 50px;
-             color: #717171;
+            color: #717171;
         }
     }
     .location-name {
-    width: calc(100% - 50px);
-    line-height: 50px;
-    padding: 0 4px;
-    text-transform: uppercase;
-    border: 1px solid #ccc;
-    height: 50px;
-    font-weight: 700;
-    color: #4CAF50;
-    background-color: white;
-    border-left: 0;
-    border-radius: 0 3px 3px 0;
+        width: calc(100% - 50px);
+        line-height: 50px;
+        padding: 0 4px;
+        text-transform: uppercase;
+        border: 1px solid #ccc;
+        height: 50px;
+        font-weight: 700;
+        color: #4CAF50;
+        background-color: white;
+        border-left: 0;
+        border-radius: 0 3px 3px 0;
     }
 }
+
 $categorycontainerheight:700px;
 .category-section {
     padding: 15px;
@@ -274,19 +281,21 @@ $categorycontainerheight:700px;
 
 @media (min-width: 768px) {
     .login-sigup-modal .modal-dialog,
-    .forgot-password .modal-dialog ,
-    .select-location .modal-dialog{
+    .forgot-password .modal-dialog,
+    .select-location .modal-dialog {
         width: 450px;
     }
 }
 
-.forgot-password,.select-location {
+.forgot-password,
+.select-location {
     .form-control {
         height: 40px;
     }
 }
+
 .select-location {
-    .location-section{
+    .location-section {
         padding: 25px;
     }
 }
@@ -295,24 +304,116 @@ $categorycontainerheight:700px;
     position: relative;
     z-index: 1;
     text-align: center;
-    
     &:before {
         border-top: 1px solid #dfdfdf;
-        content:"";
-        margin: 0 auto; /* this centers the line to the full width specified */
-        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-        top: 50%; left: 0; right: 0; bottom: 0;
+        content: "";
+        margin: 0 auto;
+        /* this centers the line to the full width specified */
+        position: absolute;
+        /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
         width: 95%;
         z-index: -1;
     }
-
-    span { 
-        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
-        background: #fff; 
-        padding: 0 15px; 
+    span {
+        /* to hide the lines from behind the text, you have to set the background color the same as the container */
+        background: #fff;
+        padding: 0 15px;
     }
 }
-footer{
+
+.description {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -moz-line-clamp: 3;
+    -ms-line-clamp: 3;
+    -o-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    height: 60px;
+    color: #333;
+}
+
+.multi-button-parent {
+    [class*="col"]:first-child {
+        padding-right: 7.5px;
+    }
+     [class*="col"] + [class*="col"] {
+        padding-left: 7.5px;
+    }
+}
+
+.merchant-list,.category-list {
+    height: 900px;
+    min-height: 500px;
+    overflow: auto;
+}
+
+.merchant-item {
+    border: 1px solid #ccC;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    .img-container {
+        height: 177px;
+        width: 200px;
+        float: left;
+        background-color: $fitygrey;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .right-sec {
+        width: calc(100% - 200px);
+        padding: 0 15px 15px 15px;
+        float: left;
+    }
+}
+
+@media (max-width:765px) {
+    .merchant-item {
+        .img-container {
+            height: 177px;
+            width: 100%;
+            background-color: $fitygrey;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .right-sec {
+            width: 100%;
+            padding: 0 15px 15px 15px;
+        }
+    }
+}
+
+.sort-btn{
+    button{
+        border:2px solid transparent;
+        color: $fitygrey;
+    }
+    button.active{
+        border:2px solid $primary-color;
+        color: $primary-color;
+    }
+}
+.search-by{
+    border: 1px solid transparent;
+}
+
+footer {
     height: 100px;
     margin-top: 4rem;
     background-color: #1f1f1f;
