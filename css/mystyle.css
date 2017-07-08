@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+a:focus {
+  outline: 0; }
+
 .inline-block {
   display: inline-block !important; }
 
@@ -238,7 +241,9 @@
 @media (min-width: 768px) {
   .login-sigup-modal .modal-dialog,
   .forgot-password .modal-dialog,
-  .select-location .modal-dialog {
+  .select-location .modal-dialog,
+  .advertise .modal-dialog,
+  .request-popup .modal-dialog {
     width: 450px; }
   .free-listing-modal .modal-dialog {
     width: 750px; } }
@@ -404,10 +409,7 @@
 .write-review {
   padding: 15px;
   border: 1px solid #cccccc;
-  margin-top: 2rem;
-  /****** Style Star Rating Widget *****/
-  /***** CSS Magic to Highlight Stars on Hover *****/
-  /* hover previous stars in list */ }
+  margin-top: 2rem; }
   .write-review .simple-text {
     float: left;
     padding-top: 8px;

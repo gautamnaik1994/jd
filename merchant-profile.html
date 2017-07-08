@@ -282,6 +282,59 @@
     </div>
 
     <!-- free listing form End -->
+         <!-- Advertize Modal Start -->
+         <div id="advertise" class="modal fade advertise" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" >Advertise</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group ">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" placeholder="" id="">
+                    </div>
+                    <div class="form-group ">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control" placeholder="" id="">
+                    </div>
+                      <div class="form-group clearfix">
+                        <label for="">Mobile</label>
+                        <input type="text" class="form-control" placeholder="" id="">
+                        <button class="btn btn-link pull-right">verify</button>
+                    </div>
+                    <div class="form-group">
+                        google captcha
+                         <button class="btn btn-sm btn-primary wire-btn btn-block">Send</button>
+                    </div>
+                    <div class="form-group ">
+                        <label for="">OTP</label>
+                        <input type="text" class="form-control" placeholder="" id="">
+                    </div>
+                     <div class="form-group ">
+                        <label for="">Business Name</label>
+                        <input type="text" class="form-control" placeholder="" id="">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block btn-lg  fourrem-margin-top">Submit</button>
+
+                    <ul class="tworem-margin-top">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+     <!-- Advertize Modal End -->
     <div class="fixed-button-container">
         <button class="btn btn-primary btn-lg " data-toggle="modal" data-target="#freelisting">
     Free Listing
@@ -320,7 +373,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right navbar-btns">
-                    <li><a href="#">Advertise </a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#advertise">Advertise </a></li>
 
                     <li><button href="#" class="btn btn-primary rounded-btn wire-btn" data-toggle="modal" data-target="#freelisting">Free Listing</button></li>
                     <li><button href="#" class="btn btn-primary rounded-btn" data-toggle="modal" data-target="#loginsignup">Login/Sign Up</button></li>

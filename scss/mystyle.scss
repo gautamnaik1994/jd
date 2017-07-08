@@ -2,6 +2,11 @@
 $primary-color:#ff8100;
 $fitygrey:#8c8c8c;
 $yellowcolor:#ffc107;
+
+a:focus{
+    outline: 0;
+}
+
 .inline-block {
     display: inline-block!important;
 }
@@ -16,6 +21,7 @@ $yellowcolor:#ffc107;
 .img-fluid {
     width: 100%;
 }
+
 
 .relative {
     position: relative;
@@ -304,7 +310,9 @@ $categorycontainerheight:700px;
 @media (min-width: 768px) {
     .login-sigup-modal .modal-dialog,
     .forgot-password .modal-dialog,
-    .select-location .modal-dialog {
+    .select-location .modal-dialog,
+    .advertise .modal-dialog,
+    .request-popup .modal-dialog{
         width: 450px;
     }
     .free-listing-modal .modal-dialog{
@@ -535,7 +543,7 @@ $profileimagewidth:55px;
     .submit-btn{
         width: 160px;
     }
-    /****** Style Star Rating Widget *****/
+
     .rating-input {
         border: none;
         float: left;
@@ -559,20 +567,20 @@ $profileimagewidth:55px;
         color: #ddd;
         float: right;
     }
-    /***** CSS Magic to Highlight Stars on Hover *****/
+
     .rating-input>input:checked~label,
-    /* show gold star when clicked */
+
     .rating-input:not(:checked)>label:hover,
-    /* hover current star */
+
     .rating-input:not(:checked)>label:hover~label {
         color: #FFD700;
     }
-    /* hover previous stars in list */
+
     .rating-input>input:checked+label:hover,
-    /* hover current star when changing rating-input */
+
     .rating-input>input:checked~label:hover,
     .rating-input>label:hover~input:checked~label,
-    /* lighten current selection */
+
     .rating-input>input:checked~label:hover~label {
         color: #FFED85;
     }
