@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 $primary-color:#ff8100;
 $fitygrey:#8c8c8c;
+$yellowcolor:#ffc107;
 .inline-block {
     display: inline-block!important;
 }
@@ -9,10 +10,28 @@ $fitygrey:#8c8c8c;
     padding: 0!important;
 }
 
+.textarea-noresize{
+    resize: none;
+}
+.img-fluid {
+    width: 100%;
+}
+
 .relative {
     position: relative;
 }
 
+.font-16 {
+    font-size: 16px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
 
 .tworem-margin-top {
     margin-top: 2rem;
@@ -347,14 +366,15 @@ $categorycontainerheight:700px;
     [class*="col"]:first-child {
         padding-right: 7.5px;
     }
-     [class*="col"] + [class*="col"] {
+    [class*="col"]+[class*="col"] {
         padding-left: 7.5px;
     }
 }
 
-.merchant-list,.category-list {
-    height: 900px;
-    min-height: 500px;
+.merchant-list,
+.category-list {
+ max-height: 700px;
+    min-height: 70px;
     overflow: auto;
 }
 
@@ -399,18 +419,157 @@ $categorycontainerheight:700px;
     }
 }
 
-.sort-btn{
-    button{
-        border:2px solid transparent;
+.sort-btn {
+    button {
+        border: 2px solid transparent;
         color: $fitygrey;
     }
-    button.active{
-        border:2px solid $primary-color;
+    button.active {
+        border: 2px solid $primary-color;
         color: $primary-color;
     }
 }
-.search-by{
+
+.search-by {
     border: 1px solid transparent;
+}
+
+.merchant-profile-top {
+    border: 1px solid #d9d9d9;
+    padding: 0 15px 15px 15px;
+    border-radius: 3px;
+    margin: 2rem 0;
+    .details {
+        line-height: 24px;
+        margin-bottom: 5px;
+        &>i {
+            margin-right: 10px;
+            color: $fitygrey;
+        }
+        i {
+            vertical-align: bottom;
+        }
+    }
+    .request-quote-btn {
+        // position: absolute;
+        // bottom: 15px;
+        // right: 15px;
+    }
+}
+
+.rating-stars {
+    i {
+        color: #cecece;
+        font-size: 20px;
+    }
+    i.yellow {
+        color: $yellowcolor;
+    }
+}
+
+$profileimagewidth:55px;
+.review {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 2rem;
+    min-height: 200px;
+    max-height: 700px;
+    overflow-y: auto;
+    .item {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 15px;
+        .left-sec {
+            width: $profileimagewidth;
+            img {
+                object-fit: cover;
+                width: $profileimagewidth;
+                height: $profileimagewidth;
+                border-radius: 50%;
+            }
+        }
+        .right-sec {
+            width: calc(100% - #{$profileimagewidth});
+            padding-left: 15px;
+        }
+        .top-part {
+            line-height: 30px;
+        }
+        .rating i {
+            vertical-align: sub;
+            font-size: 20px;
+            color: $yellowcolor;
+        }
+    }
+}
+
+.image-grid {
+    height: 500px;
+    overflow-y: auto;
+    a {
+        margin-bottom: 20px;
+    }
+}
+
+.write-review {
+        padding: 15px;
+    border: 1px solid #cccccc;
+    margin-top: 2rem;
+    .simple-text{
+        float: left;
+    padding-top: 8px;
+    margin-right:8px; 
+    }
+    fieldset,
+    label {
+        margin: 0;
+        padding: 0;
+    }
+    .submit-btn{
+        width: 160px;
+    }
+    /****** Style Star Rating Widget *****/
+    .rating-input {
+        border: none;
+        float: left;
+
+    }
+    .rating-input>input {
+        display: none;
+    }
+    .rating-input>label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: "Material Icons";
+        display: inline-block;
+        content: "\E838";
+    }
+    .rating-input>.half:before {
+         content: "\E839";
+        font-family: "Material Icons";
+        position: absolute;
+    }
+    .rating-input>label {
+        color: #ddd;
+        float: right;
+    }
+    /***** CSS Magic to Highlight Stars on Hover *****/
+    .rating-input>input:checked~label,
+    /* show gold star when clicked */
+    .rating-input:not(:checked)>label:hover,
+    /* hover current star */
+    .rating-input:not(:checked)>label:hover~label {
+        color: #FFD700;
+    }
+    /* hover previous stars in list */
+    .rating-input>input:checked+label:hover,
+    /* hover current star when changing rating-input */
+    .rating-input>input:checked~label:hover,
+    .rating-input>label:hover~input:checked~label,
+    /* lighten current selection */
+    .rating-input>input:checked~label:hover~label {
+        color: #FFED85;
+    }
 }
 
 footer {

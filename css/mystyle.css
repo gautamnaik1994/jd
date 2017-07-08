@@ -5,8 +5,23 @@
 .padding-zero {
   padding: 0 !important; }
 
+.textarea-noresize {
+  resize: none; }
+
+.img-fluid {
+  width: 100%; }
+
 .relative {
   position: relative; }
+
+.font-16 {
+  font-size: 16px; }
+
+.font-18 {
+  font-size: 18px; }
+
+.font-20 {
+  font-size: 20px; }
 
 .tworem-margin-top {
   margin-top: 2rem; }
@@ -275,9 +290,10 @@
 .multi-button-parent [class*="col"] + [class*="col"] {
   padding-left: 7.5px; }
 
-.merchant-list, .category-list {
-  height: 900px;
-  min-height: 500px;
+.merchant-list,
+.category-list {
+  max-height: 700px;
+  min-height: 70px;
   overflow: auto; }
 
 .merchant-item {
@@ -323,6 +339,107 @@
 
 .search-by {
   border: 1px solid transparent; }
+
+.merchant-profile-top {
+  border: 1px solid #d9d9d9;
+  padding: 0 15px 15px 15px;
+  border-radius: 3px;
+  margin: 2rem 0; }
+  .merchant-profile-top .details {
+    line-height: 24px;
+    margin-bottom: 5px; }
+    .merchant-profile-top .details > i {
+      margin-right: 10px;
+      color: #8c8c8c; }
+    .merchant-profile-top .details i {
+      vertical-align: bottom; }
+
+.rating-stars i {
+  color: #cecece;
+  font-size: 20px; }
+
+.rating-stars i.yellow {
+  color: #ffc107; }
+
+.review {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 2rem;
+  min-height: 200px;
+  max-height: 700px;
+  overflow-y: auto; }
+  .review .item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px; }
+    .review .item .left-sec {
+      width: 55px; }
+      .review .item .left-sec img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%; }
+    .review .item .right-sec {
+      width: calc(100% - 55px);
+      padding-left: 15px; }
+    .review .item .top-part {
+      line-height: 30px; }
+    .review .item .rating i {
+      vertical-align: sub;
+      font-size: 20px;
+      color: #ffc107; }
+
+.image-grid {
+  height: 500px;
+  overflow-y: auto; }
+  .image-grid a {
+    margin-bottom: 20px; }
+
+.write-review {
+  padding: 15px;
+  border: 1px solid #cccccc;
+  margin-top: 2rem;
+  /****** Style Star Rating Widget *****/
+  /***** CSS Magic to Highlight Stars on Hover *****/
+  /* hover previous stars in list */ }
+  .write-review .simple-text {
+    float: left;
+    padding-top: 8px;
+    margin-right: 8px; }
+  .write-review fieldset,
+  .write-review label {
+    margin: 0;
+    padding: 0; }
+  .write-review .submit-btn {
+    width: 160px; }
+  .write-review .rating-input {
+    border: none;
+    float: left; }
+  .write-review .rating-input > input {
+    display: none; }
+  .write-review .rating-input > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: "Material Icons";
+    display: inline-block;
+    content: "\E838"; }
+  .write-review .rating-input > .half:before {
+    content: "\E839";
+    font-family: "Material Icons";
+    position: absolute; }
+  .write-review .rating-input > label {
+    color: #ddd;
+    float: right; }
+  .write-review .rating-input > input:checked ~ label,
+  .write-review .rating-input:not(:checked) > label:hover,
+  .write-review .rating-input:not(:checked) > label:hover ~ label {
+    color: #FFD700; }
+  .write-review .rating-input > input:checked + label:hover,
+  .write-review .rating-input > input:checked ~ label:hover,
+  .write-review .rating-input > label:hover ~ input:checked ~ label,
+  .write-review .rating-input > input:checked ~ label:hover ~ label {
+    color: #FFED85; }
 
 footer {
   height: 100px;
