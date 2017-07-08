@@ -40,6 +40,9 @@ $yellowcolor:#ffc107;
 .fourrem-margin-top {
     margin-top: 4rem;
 }
+.zero-margin-top {
+    margin-top: 0;
+}
 
 .ellipsis {
     white-space: nowrap;
@@ -304,7 +307,11 @@ $categorycontainerheight:700px;
     .select-location .modal-dialog {
         width: 450px;
     }
+    .free-listing-modal .modal-dialog{
+        width: 750px;
+    }
 }
+
 
 .forgot-password,
 .select-location {
@@ -568,6 +575,12 @@ $profileimagewidth:55px;
     /* lighten current selection */
     .rating-input>input:checked~label:hover~label {
         color: #FFED85;
+    }
+}
+.free-listing-modal{
+    .services{
+            padding: 0 15px;
+    border: 1px solid #ccc;
     }
 }
 

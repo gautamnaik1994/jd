@@ -29,6 +29,9 @@
 .fourrem-margin-top {
   margin-top: 4rem; }
 
+.zero-margin-top {
+  margin-top: 0; }
+
 .ellipsis {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -236,7 +239,9 @@
   .login-sigup-modal .modal-dialog,
   .forgot-password .modal-dialog,
   .select-location .modal-dialog {
-    width: 450px; } }
+    width: 450px; }
+  .free-listing-modal .modal-dialog {
+    width: 750px; } }
 
 .forgot-password .form-control,
 .select-location .form-control {
@@ -439,6 +444,10 @@
   .write-review .rating-input > label:hover ~ input:checked ~ label,
   .write-review .rating-input > input:checked ~ label:hover ~ label {
     color: #FFED85; }
+
+.free-listing-modal .services {
+  padding: 0 15px;
+  border: 1px solid #ccc; }
 
 footer {
   height: 100px;
