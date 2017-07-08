@@ -540,13 +540,12 @@ $profileimagewidth:55px;
     .rating-input>label:before {
         margin: 5px;
         font-size: 1.25em;
-        font-family: "Material Icons";
-        display: inline-block;
-        content: "\E838";
+       font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
     }
     .rating-input>.half:before {
-         content: "\E839";
-        font-family: "Material Icons";
+         content: "\f089";
         position: absolute;
     }
     .rating-input>label {

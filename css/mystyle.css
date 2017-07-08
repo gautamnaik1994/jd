@@ -421,12 +421,11 @@
   .write-review .rating-input > label:before {
     margin: 5px;
     font-size: 1.25em;
-    font-family: "Material Icons";
+    font-family: FontAwesome;
     display: inline-block;
-    content: "\E838"; }
+    content: "\f005"; }
   .write-review .rating-input > .half:before {
-    content: "\E839";
-    font-family: "Material Icons";
+    content: "\f089";
     position: absolute; }
   .write-review .rating-input > label {
     color: #ddd;
